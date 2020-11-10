@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-wrapper position-relative">
+        <header class="Header">
+          <div class="three-bars" onClick="fitSmallDevice()">
+            <svg height="24" class="octicon octicon-three-bars " viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path></svg>
+          </div>
+          <div class="left-items">
+            
+            <div class="svg-conatiner header-items header-links">
+              <a
+                class="svg-link"
+                href="https://github.com/"
+                data-hotkey="g d"
+                aria-label="Homepage "
+                data-ga-click="Header, go to dashboard, icon:logo"
+              >
+                <svg
+                  class="octicon octicon-mark-github v-align-middle"
+                  height="30"
+                  viewBox="0 0 16 16"
+                  version="1.1"
+                  width="30"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <div id="hide-links" class="hide-links disable-xs">
+              <div class="header-items xs-links">
+                <form class="search-input-container">
+                    <input class="search-input"type="text" placeholder="Search or jump to..."></input>
+                    <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
+                </form>
+              </div>
+              <div class="header-items visible-xs xs-links">Dashboard</div>
+              <div class="header-items header-links xs-links">Pull requests</div>
+              <div class="header-items header-links xs-links">Issues</div>
+              <div class="header-items header-links xs-links">Marketplace</div>
+              <div class="header-items header-links xs-links">Explore</div>
+              <div class="header-items visible-xs xs-links">sujinlim0101</div>
+              <div class="header-items visible-xs xs-links sign-out-link">Sign out</div>
+            </div>
+          </div>
+          <div class="right-items">
+            <div class="header-items header-links bell">
+              <svg class="octicon octicon-bell" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 16a2 2 0 001.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 008 16z"></path><path fill-rule="evenodd" d="M8 1.5A3.5 3.5 0 004.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.018.018 0 00-.003.01l.001.006c0 .002.002.004.004.006a.017.017 0 00.006.004l.007.001h10.964l.007-.001a.016.016 0 00.006-.004.016.016 0 00.004-.006l.001-.007a.017.017 0 00-.003-.01l-1.703-2.554a1.75 1.75 0 01-.294-.97V5A3.5 3.5 0 008 1.5zM3 5a5 5 0 0110 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.518 1.518 0 0113.482 13H2.518a1.518 1.518 0 01-1.263-2.36l1.703-2.554A.25.25 0 003 7.947V5z"></path></svg>
+            </div>
+            <div class="plus-box header-items header-links invisible-xs" onclick="clickPlusBox()">
+              <svg class="octicon octicon-plus" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"></path></svg>
+              <span class="dropdown-caret"></span>
+              <div id="detail-menu-plus"class="detail-menu plus hide-click-md-plus">
+                <div>New Repository</div>
+                <div>Import repository</div>
+                <div>New gist</div>
+                <div>New oraginzation</div>
+                <div>New project</div>
+              </div>
+            </div>
+            <div id="avatar-box" class="header-items header-links avatar invisible-xs" onclick="clickAvatarBox()">
+              <img alt="@sujinlim0101" width="20" height="20" src="https://avatars1.githubusercontent.com/u/60640614?s=60&amp;v=4" class="avatar avatar-user ">
+              <span class="dropdown-caret"></span>
+              <div id="detail-menu-avatar" class="detail-menu avatar hide-click-md-avatar">
+                <div>Signed in as</div>
+                <div class="avatar-menu-border">Sujinlim0101</div>
+                <div class="avatar-menu-border  avatar-button-container "><button>Set status</button></div>
+                <div>Your profile</div>
+                <div>Your projects</div>
+                <div>Your stars</div>
+                <div class="avatar-menu-border">Your gists</div>
+                <div>Your upgrade</div>
+                <div>Feature preview</div>
+                <div>Your Help</div>
+                <div>Settings</div>
+                <div>Sign out</div>
+
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+
+      <div style="max-width: 768px; margin: 40px auto; padding : 0 32px; height: 5em;">
+        <div class="heading">
+          <h1>Create a new repository</h1>
+          <div class="heading-description">A repository contains all project files, including the revision history. Already have a project repository elsewhere? <a href="#">Import a  repository</a>.</div>  
+        </div>
+        <form class="form">
+          <div class="form-group">
+            <div class="form-group-inline">
+              <label>Owner <span class="important">*</span></label>
+              <select>
+                <option>sujinlim0101</option>
+              </select>
+            </div>
+            <span class="divider">/</span>
+            <div  class="form-group-inline">
+              <label>Repository name <span class="important">*</span></label>
+              <input>
+            </div>
+            <p class="suggestion">Great repository names are short and memorable. Need inspiration? How about <a href="#" class="success">redesigned-potato</a>?</p>
+          </div>
+          <div class="form-group">
+            <label>Description <span class="optional">(optional)</span></label>
+            <input class="repo-input" type="
+            t" name="description" />
+          </div>
+          <hr>
+          <div class="form-group">
+            <div class="form-radio">
+              <input class="repo-input" type="radio" id
+              ="public" name="type" value="public"
+              checked>
+              <svg height="32" class="form-icon form-icon-public" viewBox="0 0 24 24" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M3 2.75A2.75 2.75 0 015.75 0h14.5a.75.75 0 01.75.75v20.5a.75.75 0 01-.75.75h-6a.75.75 0 010-1.5h5.25v-4H6A1.5 1.5 0 004.5 18v.75c0 .716.43 1.334 1.05 1.605a.75.75 0 01-.6 1.374A3.25 3.25 0 013 18.75v-16zM19.5 1.5V15H6c-.546 0-1.059.146-1.5.401V2.75c0-.69.56-1.25 1.25-1.25H19.5z"></path><path d="M7 18.25a.25.25 0 01.25-.25h5a.25.25 0 01.25.25v5.01a.25.25 0 01-.397.201l-2.206-1.604a.25.25 0 00-.294 0L7.397 23.46a.25.25 0 01-.397-.2v-5.01z"></path></svg>
+              <div class="form-content">
+                <label for="public">Public</label>
+                <span class="description">Anyone on the internet can see this repository. You choose who can commit.</span>
+              </div>
+            </div>
+            <div class="form-radio">
+              <input class="repo-input" type="radio" id="private" name="type" value="private">
+              <svg height="32" class="form-icon form-icon-private" viewBox="0 0 24 24" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M6 9V7.25C6 3.845 8.503 1 12 1s6 2.845 6 6.25V9h.5a2.5 2.5 0 012.5 2.5v8a2.5 2.5 0 01-2.5 2.5h-13A2.5 2.5 0 013 19.5v-8A2.5 2.5 0 015.5 9H6zm1.5-1.75C7.5 4.58 9.422 2.5 12 2.5c2.578 0 4.5 2.08 4.5 4.75V9h-9V7.25zm-3 4.25a1 1 0 011-1h13a1 1 0 011 1v8a1 1 0 01-1 1h-13a1 1 0 01-1-1v-8z"></path></svg>
+              <div class="form-content">
+                <label for="private">Private</label>
+                <span class="description">You choose who can see and commit to this repository.</span>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <h3>Initialize this repository with:</h3>
+          <p class="description">Skip this step if you’re importing an existing repository.</p>
+          <dic class="form-group">
+            <div class="form-checkbox">
+              <input class="repo-input" type="checkbox" id="readme" name="addional" value="readme">
+              <div class="form-content">
+                <label for="readme"> Add a README file</label>
+                <span class="description">This is where you can write a long description for your project. <a href="">Learn more.</a></span>
+              </div>
+            </div>
+            <div class="form-checkbox">
+              <input class="repo-input" type="checkbox" id="gitignore" name="addional" value="gitignore">
+              <div class="form-content">
+                <label for="gitignore"> Add .gitignore</label>
+                <span class="description">Choose which files not to track from a list of templates. <a href="">Learn more.</a></span>
+              </div>
+            </div>
+            <div class="form-checkbox">
+              <input class="repo-input" type="checkbox" id="license" name="addional" value="license">
+              <div class="form-content">
+                <label for="license"> Choose a license</label>
+                <span class="description">A license tells others what they can and can't do with your code. <a href="">Learn more.</a></span>
+              </div>
+            </div>
+          </dic>
+          <hr>
+          <div>
+            <button class="success">Create repository</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
