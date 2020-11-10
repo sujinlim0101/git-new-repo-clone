@@ -369,4 +369,7 @@ svg:not(:root) {
     display: flex;
     justify-content: space-between;
   }
+  .heading {
+    padding-top: 80px;
+  }
 }
